@@ -1,0 +1,127 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.unnoficial_kitsu_client"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+9        android:targetSdkVersion="30" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:3:5-67
+14-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:3:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:4:5-79
+15-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:4:22-76
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:5:5-80
+16-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:5:22-78
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:6:5-79
+17-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:6:22-77
+18    <uses-permission android:name="android.permission.CAMERA" />
+18-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:7:5-65
+18-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:7:22-62
+19
+20    <application
+20-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:9:4-49:19
+21        android:allowBackup="false"
+21-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:10:9-36
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] /Users/syubbanfakhriya/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:fullBackupContent="false"
+24-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:11:9-42
+25        android:icon="@mipmap/ic_launcher"
+25-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:13:9-43
+26        android:label="unnoficial_kitsu_client" >
+26-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:12:9-48
+27        <activity
+27-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:14:9-43:20
+28            android:name="com.example.unnoficial_kitsu_client.MainActivity"
+28-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:15:13-41
+29            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+29-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:19:13-163
+30            android:hardwareAccelerated="true"
+30-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:20:13-47
+31            android:label="Suitcore GetX"
+31-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:17:13-42
+32            android:launchMode="singleTop"
+32-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:16:13-43
+33            android:theme="@style/LaunchTheme"
+33-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:18:13-47
+34            android:windowSoftInputMode="adjustResize" >
+34-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:21:13-55
+35
+36            <!--
+37                 Specifies an Android theme to apply to this Activity as soon as
+38                 the Android process has started. This theme is visible to the user
+39                 while the Flutter UI initializes. After that, this theme continues
+40                 to determine the Window background behind the Flutter UI.
+41            -->
+42            <meta-data
+42-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:26:13-29:17
+43                android:name="io.flutter.embedding.android.NormalTheme"
+43-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:27:15-70
+44                android:resource="@style/NormalTheme" />
+44-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:28:15-52
+45            <!--
+46                 Displays an Android View that continues showing the launch screen
+47                 Drawable until Flutter paints its first frame, then this splash
+48                 screen fades out. A splash screen is useful to avoid any visual
+49                 gap between the end of Android's launch screen and the painting of
+50                 Flutter's first frame.
+51            -->
+52            <meta-data
+52-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:35:13-38:17
+53                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+53-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:36:15-79
+54                android:resource="@drawable/launch_background" />
+54-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:37:15-61
+55
+56            <intent-filter>
+56-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:39:13-42:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:40:17-68
+57-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:40:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:41:17-76
+59-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:41:27-74
+60            </intent-filter>
+61        </activity>
+62        <!--
+63             Don't delete the meta-data below.
+64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+65        -->
+66        <meta-data
+66-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:46:9-48:33
+67            android:name="flutterEmbedding"
+67-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:47:13-44
+68            android:value="2" />
+68-->/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/android/app/src/main/AndroidManifest.xml:48:13-30
+69
+70        <provider
+70-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+71            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+71-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
+72            android:authorities="com.example.unnoficial_kitsu_client.flutter.image_provider"
+72-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+73            android:exported="false"
+73-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+74            android:grantUriPermissions="true" >
+74-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+75            <meta-data
+75-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
+76                android:name="android.support.FILE_PROVIDER_PATHS"
+76-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+77                android:resource="@xml/flutter_image_picker_file_paths" />
+77-->[:image_picker] /Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
+78        </provider>
+79    </application>
+80
+81</manifest>

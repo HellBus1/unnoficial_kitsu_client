@@ -1,0 +1,33 @@
+class AttributesFields {
+  static const int createdAt = 0;
+  static const int updatedAt = 1;
+  static const int slug = 2;
+  static const int synopsis = 3;
+  static const int description = 4;
+  static const int coverImageTopOffset = 5;
+  static const int titles = 6;
+  static const int canonicalTitle = 7;
+  static const int abbreviatedTitles = 8;
+  static const int averageRating = 9;
+  static const int ratingFrequencies = 10;
+  static const int userCount = 11;
+  static const int favoritesCount = 12;
+  static const int startDate = 13;
+  static const int endDate = 14;
+  static const int nextRelease = 15;
+  static const int popularityRank = 16;
+  static const int ratingRank = 17;
+  static const int ageRating = 18;
+  static const int ageRatingGuide = 19;
+  static const int subtype = 20;
+  static const int status = 21;
+  static const int tba = 22;
+  static const int posterImage = 23;
+  static const int coverImage = 24;
+  static const int episodeCount = 25;
+  static const int episodeLength = 26;
+  static const int totalLength = 27;
+  static const int youtubeVideoId = 28;
+  static const int showType = 29;
+  static const int nsfw = 30;
+}
