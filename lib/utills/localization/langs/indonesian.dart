@@ -12,6 +12,11 @@ const Map<String, String> id = {
   'txt_error_title': 'Terjadi kesalahan',
   'txt_error_general': 'Oops terjadi kesalahan server...',
 
+  'txt_menu_manga': 'Manga',
+  'txt_menu_anime': 'Anime',
+  'txt_trailer': 'Lihat Cuplikan',
+  'txt_information': 'Informasi Lanjutan',
+
   //BUTTON
   'txt_button_retry': 'Coba Lagi',
   'txt_button_change_locale': 'Ganti Bahasa',

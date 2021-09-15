@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:unnoficial_kitsu_client/feature/anime/anime_controller.dart';
+import 'package:unnoficial_kitsu_client/feature/anime/trending_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/heading.dart';
 
 import '../../../utills/widget/anime_item_widget.dart';
@@ -20,7 +20,7 @@ class AnimePageList extends StatelessWidget {
           title: "Trending Now",
         ),
         Container(
-          height: ((MediaQuery.of(context).size.width * 0.85) / 320 * 140),
+          height: ((MediaQuery.of(context).size.width * 0.85) / 320 * 150),
           child: SmartRefresher(
               enablePullDown: true,
               enablePullUp: controller.hasNext,

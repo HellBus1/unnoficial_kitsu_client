@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 import 'package:unnoficial_kitsu_client/resources/resources.dart';
+
+class StaticColor {
+  static const bottomNavColor = Color.fromRGBO(19, 18, 18, 1);
+}
 
 class AppTheme {
   static ThemeData buildThemeData(bool darkMode) {
@@ -19,7 +24,7 @@ class AppTheme {
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
       appBarTheme: (darkMode) ? darkAppBar() : lightAppBar(),
-      fontFamily: 'Lato',
+      // fontFamily: 'Lato',
       floatingActionButtonTheme: FloatingActionButtonThemeData(),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -53,7 +58,8 @@ class AppTheme {
             color: Resources.color.colorPrimary,
             fontWeight: FontWeight.w500),
         bodyText1: TextStyle(fontSize: 12.sp, color: Colors.black87),
-        bodyText2: TextStyle(fontSize: 12.sp, color: Colors.black87),
+        bodyText2: TextStyle(
+            fontSize: 11.sp, color: Colors.white, fontWeight: FontWeight.w600),
         button: TextStyle(fontSize: 14.sp, color: Colors.white),
       ),
       inputDecorationTheme: inputDecoration(darkMode),
@@ -103,9 +109,9 @@ class AppTheme {
 
   static BottomNavigationBarThemeData darkNavigation() {
     return BottomNavigationBarThemeData(
-      backgroundColor: Colors.black,
-      unselectedItemColor: Colors.white,
-      selectedItemColor: Colors.deepOrangeAccent,
+      backgroundColor: StaticColor.bottomNavColor,
+      unselectedItemColor: Colors.grey,
+      selectedItemColor: Colors.white,
       elevation: 0,
     );
   }

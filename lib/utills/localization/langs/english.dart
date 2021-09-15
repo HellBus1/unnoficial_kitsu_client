@@ -12,6 +12,11 @@ const Map<String, String> en = {
   'txt_error_title': 'Something when wrong',
   'txt_error_general': 'Oops something when wrong...',
 
+  'txt_menu_manga': 'Manga',
+  'txt_menu_anime': 'Anime',
+  'txt_trailer': 'Watch Trailer',
+  'txt_information': 'More Information',
+
   //BUTTON
   'txt_button_retry': 'Retry',
   'txt_button_change_locale': 'Change Language',

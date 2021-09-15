@@ -2,6 +2,7 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
 import 'package:sizer/sizer.dart';
+import 'package:unnoficial_kitsu_client/utills/widget/custom_title.dart';
 
 class AnimeItemWidget extends StatelessWidget {
   final int index;
@@ -14,12 +15,16 @@ class AnimeItemWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: 120,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: FancyShimmerImage(
-            imageUrl: baseAnime.attributes.posterImage.small,
-            boxFit: BoxFit.fitHeight,
+        margin: EdgeInsets.symmetric(horizontal: 5),
+        child: Container(
+          width: 120,
+          height: ((MediaQuery.of(context).size.width * 0.85) / 320 * 140),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: FancyShimmerImage(
+              imageUrl: baseAnime.attributes.posterImage.small,
+              boxFit: BoxFit.cover,
+            ),
           ),
         ),
       ),

@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:unnoficial_kitsu_client/binding/dashboard_tab_binding.dart';
 import 'package:unnoficial_kitsu_client/binding/login_binding.dart';
 import 'package:unnoficial_kitsu_client/binding/place_detail_binding.dart';
-import 'package:unnoficial_kitsu_client/feature/anime/anime_controller.dart';
+import 'package:unnoficial_kitsu_client/feature/anime/trending_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/anime_page.dart';
 import 'package:unnoficial_kitsu_client/feature/dashboardtab/dashboard_tab_page.dart';
 import 'package:unnoficial_kitsu_client/feature/loader/loading_page.dart';
@@ -33,8 +33,8 @@ class PageRoutes {
         page: () => PlaceDetailPage(),
         binding: PlaceDetailBinding()),
     GetPage(
-        name: PageName.ANIME,
-        page: () => AnimePage(),
-        binding: DashBoardTabBinding())
+      name: PageName.ANIME,
+      page: () => AnimePage(),
+    )
   ];
 }
