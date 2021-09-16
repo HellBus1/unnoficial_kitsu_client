@@ -3,14 +3,13 @@ import 'dart:math';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:unnoficial_kitsu_client/feature/anime/trending_anime_controller.dart';
+import 'package:unnoficial_kitsu_client/feature/anime/controller/trending_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/widget/header_description.dart';
 import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
 
 class HeaderImage extends StatelessWidget {
-  HeaderImage(this.controller);
-
   final TrendingAnimeController controller;
+  HeaderImage({required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +18,10 @@ class HeaderImage extends StatelessWidget {
           controller.dataList[Random().nextInt(controller.dataList.length)];
       return Stack(
         children: [
-          Container(height: Get.height * 0.65),
+          Container(height: Get.height * 0.60),
           Container(
             width: double.infinity,
-            height: Get.height * 0.6,
+            height: Get.height * 0.55,
             child: ShaderMask(
               shaderCallback: (rect) {
                 return LinearGradient(

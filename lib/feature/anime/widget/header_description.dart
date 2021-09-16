@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/custom_button.dart';
 import 'package:intl/intl.dart';
+import 'package:sizer/sizer.dart';
 
 class HeaderDescription extends StatelessWidget {
   final BaseAnime baseAnime;
@@ -12,33 +13,51 @@ class HeaderDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 15),
+      margin: EdgeInsets.symmetric(horizontal: 22),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            child: Text(baseAnime.attributes.canonicalTitle),
+            child: Text(
+              baseAnime.attributes.canonicalTitle,
+              style: TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           Container(
             margin: EdgeInsets.only(bottom: 10),
-            child: Text("(${baseAnime.attributes.titles.jaJp})"),
+            child: Text(
+              "(${baseAnime.attributes.titles.jaJp})",
+              style: TextStyle(fontSize: 14.sp),
+            ),
           ),
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Row(
               children: [
-                Text("${baseAnime.attributes.averageRating}% Match"),
+                Text(
+                  "${baseAnime.attributes.averageRating}% Match",
+                  style: TextStyle(fontSize: 12.sp),
+                ),
                 SizedBox(
                   width: 15,
                 ),
-                Text(DateFormat('yyyy').format(baseAnime.attributes.startDate)),
+                Text(
+                  DateFormat('yyyy').format(baseAnime.attributes.startDate),
+                  style: TextStyle(fontSize: 12.sp),
+                ),
                 SizedBox(
                   width: 15,
                 ),
-                Text(baseAnime.attributes.showType == "TV"
-                    ? "${baseAnime.attributes.showType} Series"
-                    : baseAnime.attributes.showType)
+                Text(
+                  baseAnime.attributes.showType == "TV"
+                      ? "${baseAnime.attributes.showType} Series"
+                      : baseAnime.attributes.showType,
+                  style: TextStyle(fontSize: 12.sp),
+                )
               ],
             ),
           ),

@@ -26,6 +26,7 @@ class CustomButton extends StatelessWidget {
                   Icon(
                     Icons.play_arrow,
                     color: Colors.black87,
+                    size: 24,
                   ),
                   Text('txt_trailer'.tr,
                       style: TextStyle(fontSize: 12.sp, color: Colors.black87))
@@ -46,6 +47,7 @@ class CustomButton extends StatelessWidget {
                   Icon(
                     Icons.info,
                     color: Colors.white,
+                    size: 24,
                   ),
                   SizedBox(
                     width: 5,

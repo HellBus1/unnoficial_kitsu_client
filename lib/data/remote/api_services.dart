@@ -40,8 +40,11 @@ abstract class RestClient {
   Future<ApiResponse<Place>> getPlaceDetail(@Path("id") int id);
 
   @GET("/anime")
-  Future<ApiResponses<BaseAnime>> getAnimes(@Query("page[limit]") int limit,
-      @Query("page[offset]") int offset, @Query("sort") String sort);
+  Future<ApiResponses<BaseAnime>> getAnimes(
+      @Query("page[limit]") int limit,
+      @Query("page[offset]") int offset,
+      @Query("sort") String sort,
+      @Query("filter[status]") String status);
 
   @GET("/anime/{id}")
   Future<ApiResponse<BaseAnime>> getAnimeDetail(@Path("id") int id);
@@ -54,6 +57,10 @@ abstract class RestClient {
 
   @GET("/anime/{id}/episodes")
   Future<ApiResponses<Episode>> getAnimeEpisodes();
+
+  // @GET("/anime/{id}/category")
+
+  // @GET("/anime/{id}/genres")
 }
 
 final client = RestClient.create();

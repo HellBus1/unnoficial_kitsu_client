@@ -65,12 +65,13 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<ApiResponses<BaseAnime>> getAnimes(limit, offset, sort) async {
+  Future<ApiResponses<BaseAnime>> getAnimes(limit, offset, sort, status) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'page[limit]': limit,
       r'page[offset]': offset,
-      r'sort': sort
+      r'sort': sort,
+      r'filter[status]': status
     };
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(

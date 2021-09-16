@@ -2,7 +2,6 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
 import 'package:sizer/sizer.dart';
-import 'package:unnoficial_kitsu_client/utills/widget/custom_title.dart';
 
 class AnimeItemWidget extends StatelessWidget {
   final int index;
