@@ -14,6 +14,7 @@ class DashBoardTabPage extends StatelessWidget {
     return GetBuilder<DashBoardTabController>(
       builder: (controller) {
         return ColoredStatusBar(
+          color: Colors.transparent,
           child: Scaffold(
             body: SafeArea(
               child: IndexedStack(
@@ -24,8 +25,6 @@ class DashBoardTabPage extends StatelessWidget {
             bottomNavigationBar: Container(
               decoration: BoxDecoration(
                 color: Colors.grey,
-                // border:
-                //     Border(top: BorderSide(color: Colors.white, width: 1.0)),
               ),
               child: BottomNavigationBar(
                 onTap: controller.changeTabIndex,

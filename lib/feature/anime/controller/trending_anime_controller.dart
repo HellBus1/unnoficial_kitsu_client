@@ -29,7 +29,7 @@ class TrendingAnimeController extends BaseListController<BaseAnime> {
     loadingState();
     await client.then(
       (RestClient restClient) => restClient
-          .getTrendingAnime(5, offset, "-userCount")
+          .getTrendingAnime(5, offset)
           .validateStatus()
           .then((data) {
         hasNext = data.data!.isNotEmpty;

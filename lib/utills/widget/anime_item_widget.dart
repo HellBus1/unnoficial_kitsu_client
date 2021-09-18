@@ -17,7 +17,7 @@ class AnimeItemWidget extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 5),
         child: Container(
           width: 120,
-          height: ((MediaQuery.of(context).size.width * 0.85) / 320 * 140),
+          height: ((MediaQuery.of(context).size.width * 0.85) / 320 * 120),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: FancyShimmerImage(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/controller/trending_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/anime_item_widget.dart';
@@ -24,6 +23,7 @@ class AnimeTrendingListWidget extends StatelessWidget {
           ),
           Container(
             height: ((MediaQuery.of(context).size.width * 0.85) / 320 * 150),
+            margin: EdgeInsets.symmetric(horizontal: 10),
             child: SmartRefresher(
                 enablePullDown: true,
                 enablePullUp: controller.hasNext,

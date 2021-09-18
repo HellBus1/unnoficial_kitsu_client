@@ -9,44 +9,18 @@ import 'package:sizer/sizer.dart';
 class AnimePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        top: true,
-        bottom: true,
-        child: Container(
-          child: GetBuilder<TrendingAnimeController>(
-            builder: (controller) {
-              return StateHandleWidget(
-                  loadingEnabled: controller.isShimmering,
-                  emptyEnabled: controller.isEmptyData,
-                  emptySubtitle: 'txt_empty_user'.tr,
-                  errorEnabled: controller.isError,
-                  errorText: 'txt_error_general'.tr,
-                  onRetryPressed: () {
-                    // controller.getAnimes();
-                  },
-                  body: CustomScrollView(
-                    slivers: [
-                      SliverList(
-                          delegate: SliverChildListDelegate([
-                        Container(
-                          margin: EdgeInsets.only(bottom: 15),
-                          child: HeaderImage(
-                            controller: controller,
-                          ),
-                        ),
-                        Container(
-                            padding: EdgeInsets.all(10.sp),
-                            child: AnimePageList(
-                              trendingAnimeController: controller,
-                            ))
-                      ])),
-                    ],
-                  ));
-            },
+    return Container(
+        child: CustomScrollView(
+      slivers: [
+        SliverList(
+            delegate: SliverChildListDelegate([
+          Container(
+            margin: EdgeInsets.only(bottom: 15),
+            child: HeaderImage(),
           ),
-        ),
-      ),
-    );
+          Container(padding: EdgeInsets.all(10.sp), child: AnimePageList())
+        ])),
+      ],
+    ));
   }
 }

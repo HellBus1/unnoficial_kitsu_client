@@ -27,7 +27,7 @@ class UpcomingAnimeController extends BaseListController<BaseAnime> {
     loadingState();
     await client.then(
       (RestClient restClient) => restClient
-          .getAnimes(5, offset, "", "upcoming")
+          .getAnimes(5, offset, "upcoming")
           .validateStatus()
           .then((data) {
         hasNext = data.data!.isNotEmpty;

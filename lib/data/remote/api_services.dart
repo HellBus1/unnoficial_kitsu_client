@@ -43,7 +43,6 @@ abstract class RestClient {
   Future<ApiResponses<BaseAnime>> getAnimes(
       @Query("page[limit]") int limit,
       @Query("page[offset]") int offset,
-      @Query("sort") String sort,
       @Query("filter[status]") String status);
 
   @GET("/anime/{id}")
@@ -52,8 +51,7 @@ abstract class RestClient {
   @GET("/trending/anime")
   Future<ApiResponses<BaseAnime>> getTrendingAnime(
       @Query("page[limit]") int limit,
-      @Query("page[offset]") int offset,
-      @Query("sort") String sort);
+      @Query("page[offset]") int offset);
 
   @GET("/anime/{id}/episodes")
   Future<ApiResponses<Episode>> getAnimeEpisodes();
