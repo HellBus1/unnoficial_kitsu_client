@@ -28,39 +28,6 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<ApiResponses<Place>> getPlaces(page, perPage) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'page': page,
-      r'perPage': perPage
-    };
-    final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponses<Place>>(
-            Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
-                .compose(_dio.options, '/api/places',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponses<Place>.fromJson(_result.data!);
-    return value;
-  }
-
-  @override
-  Future<ApiResponse<Place>> getPlaceDetail(id) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<Place>>(
-            Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
-                .compose(_dio.options, '/api/places/$id',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<Place>.fromJson(_result.data!);
-    return value;
-  }
-
-  @override
   Future<ApiResponses<BaseAnime>> getAnimes(limit, offset, status) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{

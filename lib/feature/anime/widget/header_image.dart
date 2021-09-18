@@ -19,7 +19,7 @@ class HeaderImage extends StatelessWidget {
             controller.dataList[Random().nextInt(controller.dataList.length)];
         return Stack(
           children: [
-            Container(height: Get.height * 0.60),
+            Container(height: Get.height * 0.65),
             Container(
               width: double.infinity,
               height: Get.height * 0.55,

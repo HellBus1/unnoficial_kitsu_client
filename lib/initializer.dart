@@ -7,7 +7,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:unnoficial_kitsu_client/model/place.dart';
 import 'data/local/hive/hive_adapters.dart';
 import 'data/local/hive/hive_constants.dart';
 import 'data/local/storage/storage_constants.dart';
@@ -47,7 +46,6 @@ class Initializer {
     await Hive.initFlutter(dir.path);
     HiveAdapters().registerAdapter();
     await Hive.openBox<User>(HiveConstants.USERS_BOX);
-    await Hive.openBox<Place>(HiveConstants.PLACES);
   }
 
   static void _initScreenPreference() {

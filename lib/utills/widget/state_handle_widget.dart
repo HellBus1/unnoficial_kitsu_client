@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:unnoficial_kitsu_client/feature/places/widgets/places_shimmer.dart';
 import 'package:unnoficial_kitsu_client/resources/resources.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/primary_button.dart';
 import 'package:get/get.dart';
@@ -49,8 +48,7 @@ class StateHandleWidget extends StatefulWidget {
 class _StateHandleWidgetState extends State<StateHandleWidget> {
   @override
   Widget build(BuildContext context) {
-    var loadingWidget =
-        widget.shimmerView ?? IgnorePointer(child: PlacesShimmer());
+    var loadingWidget = widget.shimmerView ?? IgnorePointer(child: Container());
 
     return Stack(
       children: [

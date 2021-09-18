@@ -3,7 +3,6 @@ import 'package:retrofit/retrofit.dart';
 import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
 import 'package:unnoficial_kitsu_client/model/anime/episode.dart';
 import 'package:unnoficial_kitsu_client/model/login_result.dart';
-import 'package:unnoficial_kitsu_client/model/place.dart';
 import 'environment.dart';
 import 'interceptor/dio.dart';
 import 'wrapper/api_response.dart';
@@ -32,13 +31,6 @@ abstract class RestClient {
   Future<ApiResponse<LoginResult>> login(
       @Query("email") String email, @Query("password") String password);
 
-  @GET("/api/places")
-  Future<ApiResponses<Place>> getPlaces(
-      @Query("page") int page, @Query("perPage") int perPage);
-
-  @GET("/api/places/{id}")
-  Future<ApiResponse<Place>> getPlaceDetail(@Path("id") int id);
-
   @GET("/anime")
   Future<ApiResponses<BaseAnime>> getAnimes(
       @Query("page[limit]") int limit,
@@ -50,8 +42,7 @@ abstract class RestClient {
 
   @GET("/trending/anime")
   Future<ApiResponses<BaseAnime>> getTrendingAnime(
-      @Query("page[limit]") int limit,
-      @Query("page[offset]") int offset);
+      @Query("page[limit]") int limit, @Query("page[offset]") int offset);
 
   @GET("/anime/{id}/episodes")
   Future<ApiResponses<Episode>> getAnimeEpisodes();

@@ -57,7 +57,7 @@ class AppTheme {
             fontSize: 14.sp,
             color: Resources.color.colorPrimary,
             fontWeight: FontWeight.w500),
-        bodyText1: TextStyle(fontSize: 12.sp, color: Colors.black87),
+        bodyText1: TextStyle(fontSize: 12.sp, color: Colors.white),
         bodyText2: TextStyle(
             fontSize: 11.sp, color: Colors.white, fontWeight: FontWeight.w600),
         button: TextStyle(fontSize: 14.sp, color: Colors.white),
@@ -98,6 +98,8 @@ class AppTheme {
       ),
       color: Colors.black,
       elevation: 0,
+      backwardsCompatibility: false,
+      systemOverlayStyle: SystemUiOverlayStyle.light,
       textTheme: TextTheme(
         headline6: TextStyle(
           color: Colors.white,

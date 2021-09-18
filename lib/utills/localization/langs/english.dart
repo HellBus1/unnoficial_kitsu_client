@@ -16,6 +16,9 @@ const Map<String, String> en = {
   'txt_menu_anime': 'Anime',
   'txt_trailer': 'Watch Trailer',
   'txt_information': 'More Information',
+  'txt_tv_shows': 'Tv Shows',
+  'txt_movies': 'Movies',
+  'txt_category': 'Categories',
 
   //BUTTON
   'txt_button_retry': 'Retry',

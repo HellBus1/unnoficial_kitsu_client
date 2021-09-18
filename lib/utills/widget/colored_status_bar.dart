@@ -22,17 +22,13 @@ class ColoredStatusBar extends StatelessWidget {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
         statusBarColor: color ?? defaultColor,
-        // statusBarIconBrightness: androidIconBrightness,
-        // statusBarBrightness: brightness,
+        statusBarIconBrightness: androidIconBrightness,
+        statusBarBrightness: brightness,
       ),
       child: Container(
         color: color ?? defaultColor,
-        child: SafeArea(
-          top: true,
-          bottom: true,
-          child: Container(
-            child: child,
-          ),
+        child: Container(
+          child: child,
         ),
       ),
     );

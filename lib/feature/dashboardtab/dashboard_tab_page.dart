@@ -13,37 +13,31 @@ class DashBoardTabPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<DashBoardTabController>(
       builder: (controller) {
-        return ColoredStatusBar(
-          color: Colors.transparent,
-          child: Scaffold(
-            body: SafeArea(
-              child: IndexedStack(
-                index: controller.tabIndex,
-                children: [AnimePage(), Container()],
-              ),
+        return Scaffold(
+          body: IndexedStack(
+            index: controller.tabIndex,
+            children: [AnimePage(), Container()],
+          ),
+          bottomNavigationBar: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey,
             ),
-            extendBodyBehindAppBar: true,
-            bottomNavigationBar: Container(
-              decoration: BoxDecoration(
-                color: Colors.grey,
-              ),
-              child: BottomNavigationBar(
-                onTap: controller.changeTabIndex,
-                currentIndex: controller.tabIndex,
-                type: BottomNavigationBarType.fixed,
-                showSelectedLabels: true,
-                showUnselectedLabels: true,
-                items: [
-                  _bottomNavigationBarItem(
-                    icon: CupertinoIcons.tv,
-                    label: 'txt_menu_anime'.tr,
-                  ),
-                  _bottomNavigationBarItem(
-                    icon: CupertinoIcons.book,
-                    label: 'txt_menu_manga'.tr,
-                  ),
-                ],
-              ),
+            child: BottomNavigationBar(
+              onTap: controller.changeTabIndex,
+              currentIndex: controller.tabIndex,
+              type: BottomNavigationBarType.fixed,
+              showSelectedLabels: true,
+              showUnselectedLabels: true,
+              items: [
+                _bottomNavigationBarItem(
+                  icon: CupertinoIcons.tv,
+                  label: 'txt_menu_anime'.tr,
+                ),
+                _bottomNavigationBarItem(
+                  icon: CupertinoIcons.book,
+                  label: 'txt_menu_manga'.tr,
+                ),
+              ],
             ),
           ),
         );

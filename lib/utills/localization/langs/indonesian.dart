@@ -16,6 +16,9 @@ const Map<String, String> id = {
   'txt_menu_anime': 'Anime',
   'txt_trailer': 'Lihat Cuplikan',
   'txt_information': 'Informasi Lanjutan',
+  'txt_tv_shows': 'Acara TV',
+  'txt_movies': 'Film',
+  'txt_category': 'Kategori',
 
   //BUTTON
   'txt_button_retry': 'Coba Lagi',
