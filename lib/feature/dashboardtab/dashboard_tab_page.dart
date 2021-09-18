@@ -22,6 +22,7 @@ class DashBoardTabPage extends StatelessWidget {
                 children: [AnimePage(), Container()],
               ),
             ),
+            extendBodyBehindAppBar: true,
             bottomNavigationBar: Container(
               decoration: BoxDecoration(
                 color: Colors.grey,
