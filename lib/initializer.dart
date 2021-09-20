@@ -18,7 +18,7 @@ class Initializer {
     try {
       _initScreenPreference();
       await globalLocalData();
-      // globalController();
+      globalController();
     } catch (err) {
       rethrow;
     }

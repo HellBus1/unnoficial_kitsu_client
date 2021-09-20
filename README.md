@@ -1,5 +1,7 @@
-# Suitcore Flutter GetX
+# Unnoficial Kitsu Client
 
+
+## Build with
 Suitmedia Mobile's Flutter Boilerplate Project.
 
 - GetX state management

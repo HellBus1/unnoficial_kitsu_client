@@ -1,4 +1,0 @@
-#Sun Sep 19 05:09:18 WIB 2021
-base.0=/Users/syubbanfakhriya/Desktop/Repository/unnoficial_kitsu_client/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
