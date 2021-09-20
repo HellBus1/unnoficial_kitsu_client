@@ -17,7 +17,7 @@ class DashBoardTabPage extends StatelessWidget {
         return Scaffold(
           body: IndexedStack(
             index: controller.tabIndex,
-            children: [MangaPage(), Container()],
+            children: [AnimePage(), MangaPage()],
           ),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
