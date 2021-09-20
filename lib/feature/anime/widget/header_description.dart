@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
+import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/custom_button.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
 
 class HeaderDescription extends StatelessWidget {
-  final BaseAnime baseAnime;
+  final BaseManganime baseAnime;
 
   HeaderDescription({required this.baseAnime});
 

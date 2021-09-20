@@ -32,7 +32,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<ApiResponses<BaseAnime>> getAnimes(limit, offset, status) async {
+  Future<ApiResponses<BaseManganime>> getAnimes(limit, offset, status) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'page[limit]': limit,
@@ -41,32 +41,32 @@ class _RestClient implements RestClient {
     };
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponses<BaseAnime>>(
+        _setStreamType<ApiResponses<BaseManganime>>(
             Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
                 .compose(_dio.options, '/anime',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponses<BaseAnime>.fromJson(_result.data!);
+    final value = ApiResponses<BaseManganime>.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiResponse<BaseAnime>> getAnimeDetail(id) async {
+  Future<ApiResponse<BaseManganime>> getAnimeDetail(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<BaseAnime>>(
+        _setStreamType<ApiResponse<BaseManganime>>(
             Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
                 .compose(_dio.options, '/anime/$id',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<BaseAnime>.fromJson(_result.data!);
+    final value = ApiResponse<BaseManganime>.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiResponses<BaseAnime>> getTrendingAnime(limit, offset) async {
+  Future<ApiResponses<BaseManganime>> getTrendingAnime(limit, offset) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'page[limit]': limit,
@@ -74,12 +74,12 @@ class _RestClient implements RestClient {
     };
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponses<BaseAnime>>(
+        _setStreamType<ApiResponses<BaseManganime>>(
             Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
                 .compose(_dio.options, '/trending/anime',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponses<BaseAnime>.fromJson(_result.data!);
+    final value = ApiResponses<BaseManganime>.fromJson(_result.data!);
     return value;
   }
 
@@ -95,6 +95,43 @@ class _RestClient implements RestClient {
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ApiResponses<Episode>.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<ApiResponses<BaseManganime>> getManga(limit, offset, status) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'page[limit]': limit,
+      r'page[offset]': offset,
+      r'filter[status]': status
+    };
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiResponses<BaseManganime>>(
+            Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
+                .compose(_dio.options, '/manga',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ApiResponses<BaseManganime>.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<ApiResponses<BaseManganime>> getTrendingManga(limit, offset) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'page[limit]': limit,
+      r'page[offset]': offset
+    };
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiResponses<BaseManganime>>(
+            Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
+                .compose(_dio.options, '/trending/manga',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ApiResponses<BaseManganime>.fromJson(_result.data!);
     return value;
   }
 

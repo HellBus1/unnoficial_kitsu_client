@@ -6,6 +6,7 @@ import 'package:unnoficial_kitsu_client/feature/anime/anime_page.dart';
 import 'package:unnoficial_kitsu_client/feature/dashboardtab/dashboard_tab_page.dart';
 import 'package:unnoficial_kitsu_client/feature/loader/loading_page.dart';
 import 'package:unnoficial_kitsu_client/feature/login/login_page.dart';
+import 'package:unnoficial_kitsu_client/feature/manga/manga_page.dart';
 
 import 'page_names.dart';
 
@@ -27,6 +28,7 @@ class PageRoutes {
     GetPage(
       name: PageName.ANIME,
       page: () => AnimePage(),
-    )
+    ),
+    GetPage(name: PageName.MANGA, page: () => MangaPage())
   ];
 }

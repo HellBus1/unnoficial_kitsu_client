@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/controller/trending_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/controller/upcoming_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/widget/header_description.dart';
-import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
+import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
 
 class HeaderImage extends StatelessWidget {
   HeaderImage();

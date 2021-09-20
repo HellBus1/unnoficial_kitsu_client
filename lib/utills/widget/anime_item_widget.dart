@@ -1,11 +1,11 @@
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
-import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
+import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
 import 'package:sizer/sizer.dart';
 
 class AnimeItemWidget extends StatelessWidget {
   final int index;
-  final BaseAnime baseAnime;
+  final BaseManganime baseAnime;
 
   const AnimeItemWidget({required this.index, required this.baseAnime});
 

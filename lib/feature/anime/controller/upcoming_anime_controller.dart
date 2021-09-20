@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:unnoficial_kitsu_client/data/remote/api_services.dart';
 import 'package:unnoficial_kitsu_client/data/remote/base/base_list_controller.dart';
-import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
+import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
 import 'package:unnoficial_kitsu_client/data/remote/errorhandler/error_handler.dart';
 
-class UpcomingAnimeController extends BaseListController<BaseAnime> {
+class UpcomingAnimeController extends BaseListController<BaseManganime> {
   @override
   void onInit() {
     getUpcomingAnime();
@@ -13,8 +13,8 @@ class UpcomingAnimeController extends BaseListController<BaseAnime> {
 
   @override
   void loadNextPage() {
-    page = page + 5;
-    getUpcomingAnime(offset: page);
+    // page = page + 5;
+    // getUpcomingAnime(offset: page);
   }
 
   @override
@@ -27,7 +27,7 @@ class UpcomingAnimeController extends BaseListController<BaseAnime> {
     loadingState();
     await client.then(
       (RestClient restClient) => restClient
-          .getAnimes(5, offset, "upcoming")
+          .getAnimes(20, offset, "upcoming")
           .validateStatus()
           .then((data) {
         hasNext = data.data!.isNotEmpty;

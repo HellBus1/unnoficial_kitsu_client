@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:unnoficial_kitsu_client/model/anime/base_anime.dart';
-import 'package:unnoficial_kitsu_client/model/anime/episode.dart';
+import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
+import 'package:unnoficial_kitsu_client/model/episode.dart';
 import 'package:unnoficial_kitsu_client/model/login_result.dart';
 import 'environment.dart';
 import 'interceptor/dio.dart';
@@ -32,16 +32,16 @@ abstract class RestClient {
       @Query("email") String email, @Query("password") String password);
 
   @GET("/anime")
-  Future<ApiResponses<BaseAnime>> getAnimes(
+  Future<ApiResponses<BaseManganime>> getAnimes(
       @Query("page[limit]") int limit,
       @Query("page[offset]") int offset,
       @Query("filter[status]") String status);
 
   @GET("/anime/{id}")
-  Future<ApiResponse<BaseAnime>> getAnimeDetail(@Path("id") int id);
+  Future<ApiResponse<BaseManganime>> getAnimeDetail(@Path("id") int id);
 
   @GET("/trending/anime")
-  Future<ApiResponses<BaseAnime>> getTrendingAnime(
+  Future<ApiResponses<BaseManganime>> getTrendingAnime(
       @Query("page[limit]") int limit, @Query("page[offset]") int offset);
 
   @GET("/anime/{id}/episodes")
@@ -50,6 +50,16 @@ abstract class RestClient {
   // @GET("/anime/{id}/category")
 
   // @GET("/anime/{id}/genres")
+
+  @GET("/manga")
+  Future<ApiResponses<BaseManganime>> getManga(
+      @Query("page[limit]") int limit,
+      @Query("page[offset]") int offset,
+      @Query("filter[status]") String status);
+
+  @GET("/trending/manga")
+  Future<ApiResponses<BaseManganime>> getTrendingManga(
+      @Query("page[limit]") int limit, @Query("page[offset]") int offset);
 }
 
 final client = RestClient.create();

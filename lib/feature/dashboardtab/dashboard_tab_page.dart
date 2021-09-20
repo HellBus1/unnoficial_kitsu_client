@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/anime_page.dart';
+import 'package:unnoficial_kitsu_client/feature/manga/manga_page.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/colored_status_bar.dart';
 
 import 'dashboard_tab_controller.dart';
@@ -16,7 +17,7 @@ class DashBoardTabPage extends StatelessWidget {
         return Scaffold(
           body: IndexedStack(
             index: controller.tabIndex,
-            children: [AnimePage(), Container()],
+            children: [MangaPage(), Container()],
           ),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
