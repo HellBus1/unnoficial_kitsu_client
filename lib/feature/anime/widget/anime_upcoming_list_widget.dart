@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/controller/upcoming_anime_controller.dart';
-import 'package:unnoficial_kitsu_client/utills/widget/anime_item_widget.dart';
+import 'package:unnoficial_kitsu_client/routes/page_names.dart';
+import 'package:unnoficial_kitsu_client/utills/widget/item_widget.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/heading.dart';
 
 class AnimeUpcomingListWidget extends StatelessWidget {
@@ -36,7 +37,13 @@ class AnimeUpcomingListWidget extends StatelessWidget {
                   itemCount: controller.dataList.length,
                   itemBuilder: (context, index) {
                     var item = controller.dataList[index];
-                    return AnimeItemWidget(index: index, baseAnime: item);
+                    return ItemWidget(
+                      index: index,
+                      baseAnime: item,
+                      onTap: () {
+                        Get.toNamed(PageName.ANIME_DETAIL, arguments: item.id);
+                      },
+                    );
                   })),
         )
       ],

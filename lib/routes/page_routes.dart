@@ -3,6 +3,7 @@ import 'package:unnoficial_kitsu_client/binding/dashboard_tab_binding.dart';
 import 'package:unnoficial_kitsu_client/binding/login_binding.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/controller/trending_anime_controller.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/anime_page.dart';
+import 'package:unnoficial_kitsu_client/feature/anime/detail/anime_detail_page.dart';
 import 'package:unnoficial_kitsu_client/feature/dashboardtab/dashboard_tab_page.dart';
 import 'package:unnoficial_kitsu_client/feature/loader/loading_page.dart';
 import 'package:unnoficial_kitsu_client/feature/login/login_page.dart';
@@ -29,6 +30,7 @@ class PageRoutes {
       name: PageName.ANIME,
       page: () => AnimePage(),
     ),
-    GetPage(name: PageName.MANGA, page: () => MangaPage())
+    GetPage(name: PageName.MANGA, page: () => MangaPage()),
+    GetPage(name: PageName.ANIME_DETAIL, page: () => AnimeDetailPage())
   ];
 }

@@ -9,4 +9,6 @@ class PageName {
   static const LOADER = "/loader";
   static const ANIME = "/anime";
   static const MANGA = "/manga";
+  static const ANIME_DETAIL = "/anime-detail";
+  static const MANGA_DETAIL = "/manga-detail";
 }

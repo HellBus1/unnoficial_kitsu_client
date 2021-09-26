@@ -14,7 +14,7 @@ import 'package:unnoficial_kitsu_client/utills/widget/heading.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/shimmer_widget/listview_shimmer.dart';
 import 'package:unnoficial_kitsu_client/utills/widget/state_handle_widget.dart';
 
-import '../../../utills/widget/anime_item_widget.dart';
+import '../../../utills/widget/item_widget.dart';
 
 class MangaPageList extends StatelessWidget {
   const MangaPageList({Key? key}) : super(key: key);

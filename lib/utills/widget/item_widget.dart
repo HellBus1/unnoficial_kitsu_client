@@ -3,16 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
 import 'package:sizer/sizer.dart';
 
-class AnimeItemWidget extends StatelessWidget {
+class ItemWidget extends StatelessWidget {
   final int index;
   final BaseManganime baseAnime;
+  final Function onTap;
 
-  const AnimeItemWidget({required this.index, required this.baseAnime});
+  const ItemWidget(
+      {required this.index, required this.baseAnime, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () => onTap,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 5),
         child: Container(
