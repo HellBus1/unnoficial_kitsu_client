@@ -41,7 +41,7 @@ class AnimeUpcomingListWidget extends StatelessWidget {
                       index: index,
                       baseAnime: item,
                       onTap: () {
-                        Get.toNamed(PageName.ANIME_DETAIL, arguments: item.id);
+                        Get.toNamed(PageName.ANIME_DETAIL, arguments: item);
                       },
                     );
                   })),

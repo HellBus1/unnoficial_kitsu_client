@@ -45,7 +45,7 @@ abstract class RestClient {
       @Query("page[limit]") int limit, @Query("page[offset]") int offset);
 
   @GET("/anime/{id}/episodes")
-  Future<ApiResponses<Episode>> getAnimeEpisodes();
+  Future<ApiResponses<Episode>> getAnimeEpisodes(@Path("id") int id);
 
   // @GET("/anime/{id}/category")
 

@@ -42,7 +42,7 @@ class AnimeTrendingListWidget extends StatelessWidget {
                         baseAnime: item,
                         onTap: () {
                           Get.toNamed(PageName.ANIME_DETAIL,
-                              arguments: item.id);
+                              arguments: item.toJson());
                         },
                       );
                     })),

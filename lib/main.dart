@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         translations: AppTranslation(),
         locale: LocaleHelper().getCurrentLocale(),
         fallbackLocale: LocaleHelper().fallbackLocale,
-        initialRoute: PageName.LOADER,
+        initialRoute: PageName.DASHBOARD,
         getPages: PageRoutes.pages,
         theme: AppTheme.buildThemeData(true),
       );

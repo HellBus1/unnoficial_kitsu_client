@@ -136,52 +136,55 @@ class _StateHandleWidgetState extends State<StateHandleWidget> {
       );
 
   Widget buildError(String? error, BuildContext context) => Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 40.sp),
-            Container(
-              height: 80.sp,
-              width: 89.sp,
-              alignment: Alignment.center,
-              child: Image(
-                image: Resources.images.imageError,
-                fit: BoxFit.fill,
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 40.sp),
+              Container(
+                height: 80.sp,
+                width: 89.sp,
+                alignment: Alignment.center,
+                child: Image(
+                  image: Resources.images.imageError,
+                  fit: BoxFit.fill,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 24.sp,
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: error != null
-                  ? Text(
-                      error.isEmpty ? 'txt_error_general'.tr : error,
-                      style: Theme.of(context).textTheme.bodyText2?.copyWith(
-                            color: Resources.color.black,
-                          ),
-                      textAlign: TextAlign.center,
-                    )
-                  : Container(),
-            ),
-            if (widget.onRetryPressed != null)
               SizedBox(
                 height: 24.sp,
               ),
-            if (widget.onRetryPressed != null)
-              PrimaryButton(
-                child: Text(
-                  'txt_button_retry'.tr,
-                  style: Theme.of(context)
-                      .textTheme
-                      .button
-                      ?.copyWith(fontSize: 12.sp),
-                ),
-                marginHorizontal: (MediaQuery.of(context).size.width / 5).sp,
-                height: 28.sp,
-                onPressed: widget.onRetryPressed,
+              Container(
+                alignment: Alignment.center,
+                child: error != null
+                    ? Text(
+                        error.isEmpty ? 'txt_error_general'.tr : error,
+                        style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                              color: Resources.color.black,
+                            ),
+                        textAlign: TextAlign.center,
+                      )
+                    : Container(),
               ),
-          ],
+              if (widget.onRetryPressed != null)
+                SizedBox(
+                  height: 24.sp,
+                ),
+              if (widget.onRetryPressed != null)
+                PrimaryButton(
+                  child: Text(
+                    'txt_button_retry'.tr,
+                    style: Theme.of(context)
+                        .textTheme
+                        .button
+                        ?.copyWith(fontSize: 12.sp),
+                  ),
+                  marginHorizontal: (MediaQuery.of(context).size.width / 5).sp,
+                  height: 28.sp,
+                  onPressed: widget.onRetryPressed,
+                ),
+            ],
+          ),
         ),
       );
 }

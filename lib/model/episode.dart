@@ -32,7 +32,7 @@ class Episode extends HiveObject implements ModelFactory {
   @HiveField(EpisodeFields.relationships)
   final EpisodeRelationship relationships;
 
-  factory Episode.fromMap(Map<String, dynamic> json) => Episode(
+  factory Episode.fromJson(Map<String, dynamic> json) => Episode(
         id: jsonStringData(json["id"], ""),
         type: jsonStringData(json["type"], ""),
         links: WelcomeLinks.fromJson(jsonObjectData(json["links"], {"": ""})),

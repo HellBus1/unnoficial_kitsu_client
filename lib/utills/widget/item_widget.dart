@@ -14,7 +14,7 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => onTap,
+      onTap: () => onTap(),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 5),
         child: Container(
