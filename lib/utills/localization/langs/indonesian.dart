@@ -19,6 +19,8 @@ const Map<String, String> id = {
   'txt_tv_shows': 'Acara TV',
   'txt_movies': 'Film',
   'txt_category': 'Kategori',
+  'txt_genres': 'Jenis',
+  'txt_age_rating': 'Rating Usia',
 
   //BUTTON
   'txt_button_retry': 'Coba Lagi',

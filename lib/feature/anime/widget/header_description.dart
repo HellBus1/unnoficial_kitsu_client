@@ -64,7 +64,7 @@ class HeaderDescription extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Text(
-              baseAnime.attributes.description,
+              baseAnime.attributes.synopsis,
               maxLines: 2,
               softWrap: false,
               overflow: TextOverflow.ellipsis,

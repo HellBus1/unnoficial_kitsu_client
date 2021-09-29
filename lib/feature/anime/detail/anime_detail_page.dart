@@ -4,6 +4,7 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/detail/controller/anime_detail_controller.dart';
+import 'package:unnoficial_kitsu_client/feature/anime/detail/widgets/detail_description_header_widget.dart';
 import 'package:unnoficial_kitsu_client/feature/anime/detail/widgets/video_item_widget.dart';
 import 'package:unnoficial_kitsu_client/model/base_manganime.dart';
 import 'package:unnoficial_kitsu_client/model/episode.dart';
@@ -57,10 +58,10 @@ class AnimeDetailPage extends StatelessWidget {
   SliverList getHeader() {
     return SliverList(
         delegate: SliverChildListDelegate([
-      Container(
-        child: Row(
-          children: [Container(child: Column()), Container()],
-        ),
+      DetailDescriptionHeaderWidget(
+        manganime: manganime,
+        marginVertical: 20,
+        marginHorizontal: 15,
       )
     ]));
   }
@@ -78,7 +79,7 @@ class AnimeDetailPage extends StatelessWidget {
               index: index,
             ),
           ),
-          (index < episodes.length)
+          (index < episodes.length - 1)
               ? Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
                   child: Divider(
